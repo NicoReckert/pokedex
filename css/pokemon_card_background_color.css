@@ -1,0 +1,88 @@
+.pokemon-card-background-type-grass {
+    background: rgb(58,112,54);
+    background: linear-gradient(90deg, rgb(58,112,54) 40%, rgb(17, 255, 0) 100%);
+}
+
+.pokemon-card-background-type-fire {
+    background: rgb(153,39,16);
+    background: linear-gradient(90deg, rgb(153,39,16) 40%, rgb(255, 79, 44) 100%);
+}
+
+.pokemon-card-background-type-water {
+    background: rgb(26,93,136);
+    background: linear-gradient(90deg, rgb(26,93,136) 40%, rgb(70, 184, 255) 100%);
+}
+
+.pokemon-card-background-type-bug {
+    background: rgb(87,115,25);
+    background: linear-gradient(90deg, rgb(87,115,25) 40%, rgb(174, 255, 0) 100%);
+}
+
+.pokemon-card-background-type-normal {
+    background: rgb(112,112,102);
+    background: linear-gradient(90deg, rgb(112,112,102) 40%, rgb(193, 193, 178) 100%);
+}
+
+.pokemon-card-background-type-poison {
+    background: rgb(89,49,123);
+    background: linear-gradient(90deg, rgb(89,49,123) 40%, rgb(180, 98, 252) 100%);
+}
+
+.pokemon-card-background-type-electric {
+    background: rgb(153,132,0);
+    background: linear-gradient(90deg, rgb(153,132,0) 40%, rgb(255, 255, 0) 100%);
+}
+
+.pokemon-card-background-type-ground {
+    background: rgb(99,69,34);
+    background: linear-gradient(90deg, rgb(99,69,34) 40%, rgb(255, 136, 0) 100%);
+}
+
+.pokemon-card-background-type-fairy {
+    background: rgb(141,85,138);
+    background: linear-gradient(90deg, rgb(141,85,138) 40%, rgb(255, 128, 249) 100%);
+}
+
+.pokemon-card-background-type-fighting {
+    background: rgb(112,51,40);
+    background: linear-gradient(90deg, rgb(112,51,40) 40%, rgb(255, 116, 92) 100%);
+}
+
+.pokemon-card-background-type-psychic {
+    background: rgb(153,59,76);
+    background: linear-gradient(90deg, rgb(153,59,76) 40%, rgb(255, 93, 123) 100%);
+}
+
+.pokemon-card-background-type-rock {
+    background: rgb(112,102,61);
+    background: linear-gradient(90deg, rgb(112,102,61) 40%, rgb(255, 232, 141) 100%);
+}
+
+.pokemon-card-background-type-ghost {
+    background: rgb(66,40,67);
+    background: linear-gradient(90deg, rgb(66,40,67) 40%, rgb(252, 154, 255) 100%);
+}
+
+.pokemon-card-background-type-ice {
+    background: rgb(69,124,115);
+    background: linear-gradient(90deg, rgb(69,124,115) 40%, rgb(141, 255, 236) 100%);
+}
+
+.pokemon-card-background-type-dragon {
+    background: rgb(51,67,114);
+    background: linear-gradient(90deg, rgb(51,67,114) 40%, rgb(117, 151, 255) 100%);
+}
+
+.pokemon-card-background-type-dark {
+    background: rgb(46,41,41);
+    background: linear-gradient(90deg, rgb(46,41,41) 40%, rgb(192, 173, 173) 100%);
+}
+
+.pokemon-card-background-type-steel {
+    background: rgb(102,102,112);
+    background: linear-gradient(90deg, rgb(102,102,112) 40%, rgb(206, 206, 224) 100%);
+}
+
+.pokemon-card-background-type-noclass {
+    background-color: white;
+}

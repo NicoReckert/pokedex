@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedéx</title>
+    <link rel="icon" href="assets/img/favicon.jpg" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pokemon_type_color.css">
+    <link rel="stylesheet" href="css/pokemon_card_background_color.css">
+</head>
+
+<body onload="loadPokemonInArray()">
+    <div class="all-content">
+        <div class="content d-none" id="content">
+            <header>
+                <nav>
+                    <span class="title-nav">Pokedex</span>
+                    <input class="input-nav" type="text">
+                </nav>
+            </header>
+            <div class="all-pokemon-box" id="all-pokemon-box">
+
+            </div>
+            <button class="button-next-pokemon" onclick="loadAndRenderNextPokemon()">Weitere Pokemon laden</button>
+        </div>
+        <audio id="background-music" loop>
+            <source src="assets/music/background-music.mp3" type="audio/mpeg">
+        </audio>
+        <video class="background-video d-none" id="background-video" loop playsinline>
+            <source src="assets/videos/background-video.mp4" type="video/mp4">
+        </video>
+        <div class="welcome-screen-overlay" id="welcome-screen-overlay">
+            <h1>Herzlich Willkommen im</h1>
+            <h2 class="welcome-screen-overlay-h2">Pokedéx</h2>
+            <button class="button-welcome-screen-overlay" onclick="renderPokemon(), playBackgroundMusicAndVideo(), hideOverlay('welcome-screen-overlay'), showContent()">Starten</button>
+        </div>
+        <div class="loading-spinner d-none" id="loading-spinner">
+            <img class="img-loading-spinner" src="assets/img/loading-spinner.png">
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="scripts/templates.js"></script>
+</body>
+
+</html>
