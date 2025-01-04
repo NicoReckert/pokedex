@@ -7,47 +7,44 @@ const allowedTypes = [
     "ice", "dragon", "dark", "steel"
 ];
 
-async function loadPokemonInArray() {
-    let count = allPokemon.length == 0 ? 1 : allPokemon.length + 1;
-    for (let index = count; index <= count + 24; index++) {
-        let result = await fetch("https://pokeapi.co/api/v2/pokemon/" + index);
-        let pokemonObject = await result.json();
-        allPokemon.push(pokemonObject);
-    }
-}
-
-async function loadAndRenderNextPokemon() {
+async function loadAndRenderPokemon() {
     let loadingSpinnerId = document.getElementById("loading-spinner");
     loadingSpinnerId.classList.remove("d-none");
 
-    let count = allPokemon.length == 0 ? 1 : allPokemon.length + 1;
+    let count = allPokemon.length === 0 ? 1 : allPokemon.length + 1;
+    let fetches = [];
     for (let index = count; index <= count + 24; index++) {
-        let result = await fetch("https://pokeapi.co/api/v2/pokemon/" + index);
-        let pokemonObject = await result.json();
-        allPokemon.push(pokemonObject);
+        fetches.push(fetch("https://pokeapi.co/api/v2/pokemon/" + index).then(response => response.json()));
+    }
+    try {
+        let newPokemon = await Promise.all(fetches);
+        newPokemon.forEach(pokemon => allPokemon.push(pokemon));
+    } catch (error) {
+        console.error("Fehler beim Laden der Pokemon:", error);
     }
     renderPokemon();
     loadingSpinnerId.classList.add("d-none");
 }
 
 function renderPokemon() {
+    let startIndex = allPokemon.length === 0 ? 0 : allPokemon.length - 25;
     let allPokemonBox = document.getElementById("all-pokemon-box");
-    allPokemonBox.innerHTML = "";
-    for (let index = 0; index < allPokemon.length; index++) {
+    let fragment = document.createDocumentFragment();
+    for (let index = startIndex; index < allPokemon.length; index++) {
         let pokemonType = allPokemon[index].types[0].type.name;
         let pokemonName = allPokemon[index].name;
         let pokemonId = allPokemon[index].id;
-
-        allowedTypes.includes(pokemonType) ?
-            allPokemonBox.innerHTML += templatePokemonType(pokemonId, pokemonType, allPokemon[index], pokemonName)
-            : allPokemonBox.innerHTML += templatePokemonType(pokemonId, "notype", allPokemon[index], pokemonName);
+        let pokemonImgSrc = allPokemon[index].sprites.other.dream_world.front_default != null ?
+            allPokemon[index].sprites.other.dream_world.front_default
+            : allPokemon[index].sprites.other.home.front_default;
+        let pokemonCard = allowedTypes.includes(pokemonType) ?
+            templateSmallPokemonCard(pokemonId, pokemonType, allPokemon[index], pokemonName, pokemonImgSrc)
+            : templateSmallPokemonCard(pokemonId, "notype", allPokemon[index], pokemonName, pokemonImgSrc);
+        let temporaryDiv = document.createElement("div");
+        temporaryDiv.innerHTML = pokemonCard;
+        fragment.appendChild(temporaryDiv.firstElementChild);
     }
-}
-
-function audioPlay() {
-    let audioId = document.getElementById("audio25");
-    audioId.play();
-
+    allPokemonBox.appendChild(fragment);
 }
 
 function playBackgroundMusicAndVideo() {
@@ -72,4 +69,9 @@ function showContent() {
 function criesPokemon(Id) {
     let pokemonAudioId = document.getElementById("audio" + Id);
     pokemonAudioId.play();
+}
+
+function renderBigPokemonCard(event) {
+    let index = event.target.id;
+    console.log(index);
 }

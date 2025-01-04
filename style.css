@@ -222,6 +222,67 @@ h1 {
     color: #fff;
 }
 
+.big-pokemon-card-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 50%);
+}
+
+.big-pokemon-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 15px;
+    filter: drop-shadow(8px 8px 5px black);
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+}
+
+.big-pokemon-name-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-pokemon-name {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    filter: drop-shadow(2px 2px 10px black);
+}
+
+.big-pokemon-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 220px;
+}
+
+.big-pokemon-img {
+    width: 130px;
+    height: 180px;
+    padding: 8px;
+    filter: drop-shadow(8px 8px 5px black);
+}
+
+.big.pokemon-type-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loading-spinner {
     position: fixed;
     top: 0;

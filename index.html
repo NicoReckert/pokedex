@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/pokemon_card_background_color.css">
 </head>
 
-<body onload="loadPokemonInArray()">
+<body>
     <div class="all-content">
         <div class="content d-none" id="content">
             <header>
@@ -24,7 +24,7 @@
             <div class="all-pokemon-box" id="all-pokemon-box">
 
             </div>
-            <button class="button-next-pokemon" onclick="loadAndRenderNextPokemon()">Weitere Pokemon laden</button>
+            <button class="button-next-pokemon" onclick="loadAndRenderPokemon()">Weitere Pokemon laden</button>
         </div>
         <audio id="background-music" loop>
             <source src="assets/music/background-music.mp3" type="audio/mpeg">
@@ -35,7 +35,10 @@
         <div class="welcome-screen-overlay" id="welcome-screen-overlay">
             <h1>Herzlich Willkommen im</h1>
             <h2 class="welcome-screen-overlay-h2">Pokedéx</h2>
-            <button class="button-welcome-screen-overlay" onclick="renderPokemon(), playBackgroundMusicAndVideo(), hideOverlay('welcome-screen-overlay'), showContent()">Starten</button>
+            <button class="button-welcome-screen-overlay" onclick="loadAndRenderPokemon(), playBackgroundMusicAndVideo(), showContent(), hideOverlay('welcome-screen-overlay')">Starten</button>
+        </div>
+        <div class="big-pokemon-card-overlay d-none">
+
         </div>
         <div class="loading-spinner d-none" id="loading-spinner">
             <img class="img-loading-spinner" src="assets/img/loading-spinner.png">
