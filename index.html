@@ -10,21 +10,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/pokemon_type_color.css">
     <link rel="stylesheet" href="css/pokemon_card_background_color.css">
+    <link rel="stylesheet" href="css/pokemon-icon-type-color.css">
+    <link rel="stylesheet" href="css/pokemon-menu-background-color.css">
 </head>
 
-<body>
+<body id="body" onload="clearInputValue()">
     <div class="all-content">
         <div class="content d-none" id="content">
             <header>
-                <nav>
-                    <span class="title-nav">Pokedex</span>
-                    <input class="input-nav" type="text">
-                </nav>
+                <div class="nav-box">
+                    <nav>
+                        <span class="title-nav">Pokedex</span>
+                        <div class="search-box">
+                            <span class="search-text">search Pokémon</span>
+                            <div class="search-input-info-box">
+                                <input class="search-input" type="text" id="search-input"
+                                    onkeyup="checkSearchWordAndLoadAllPokemonIds()">
+                                <span class="search-info-text opacity-no-visable" id="search-info-text">mindestens 3
+                                    Buchstaben!</span>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </header>
-            <div class="all-pokemon-box" id="all-pokemon-box">
-
+            <div class="search-mode-box d-none" id="search-mode-box">
+                <span class="search-mode-text">Search-Mode</span>
+                <button class="search-mode-button" onclick="clearAndLoadNormalPokemon()">X</button>
             </div>
-            <button class="button-next-pokemon" onclick="loadAndRenderPokemon()">Weitere Pokemon laden</button>
+            <div class="all-pokemon-box" id="all-pokemon-box">
+            </div>
+            <button class="button-next-pokemon" id="button-next-pokemon" onclick="loadAndRenderPokemon()">Weitere
+                Pokemon laden</button>
+            <button class="info-button d-none" id="info-button" disabled>Es
+                konnten keine Pokemon gefunden werden</button>
         </div>
         <audio id="background-music" loop>
             <source src="assets/music/background-music.mp3" type="audio/mpeg">
@@ -35,10 +53,10 @@
         <div class="welcome-screen-overlay" id="welcome-screen-overlay">
             <h1>Herzlich Willkommen im</h1>
             <h2 class="welcome-screen-overlay-h2">Pokedéx</h2>
-            <button class="button-welcome-screen-overlay" onclick="loadAndRenderPokemon(), playBackgroundMusicAndVideo(), showContent(), hideOverlay('welcome-screen-overlay')">Starten</button>
+            <button class="button-welcome-screen-overlay"
+                onclick="loadAndRenderPokemon(); playBackgroundMusicAndVideo(); showContent(); hideOverlay('welcome-screen-overlay')">Starten</button>
         </div>
-        <div class="big-pokemon-card-overlay d-none">
-
+        <div class="big-pokemon-card-overlay d-none" id="big-pokemon-card-overlay">
         </div>
         <div class="loading-spinner d-none" id="loading-spinner">
             <img class="img-loading-spinner" src="assets/img/loading-spinner.png">
@@ -46,6 +64,8 @@
     </div>
     <script src="script.js"></script>
     <script src="scripts/templates.js"></script>
+    <script src="scripts/pokemon_namen_deutsch.js"></script>
+    <script src="scripts/pokemon_namen_englisch.js"></script>
 </body>
 
 </html>

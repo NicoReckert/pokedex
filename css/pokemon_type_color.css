@@ -83,6 +83,11 @@
     background: linear-gradient(120deg, rgb(195, 195, 207) 40%, rgba(0, 0, 0, 1) 100%);
 }
 
+.pokemon-type-flying {
+    background: rgb(181,217,255);
+    background: linear-gradient(120deg, rgb(181,217,255) 40%, rgba(0, 0, 0, 1) 100%);
+}
+
 .pokemon-type-notype {
     background-color: white;
 }

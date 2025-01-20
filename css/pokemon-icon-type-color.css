@@ -1,0 +1,89 @@
+.bug {
+    background: rgb(131,173,37);
+    box-shadow: 0 0 10px rgb(131,173,37);
+}
+
+.dark {
+    background: rgb(70,62,62);
+    box-shadow: 0 0 10px rgb(70,62,62);
+}
+
+.dragon {
+    background: rgb(77,100,171);
+    box-shadow: 0 0 10px rgb(77,100,171);
+}
+
+.electric {
+    background: rgb(229,198,0);
+    box-shadow: 0 0 10px rgb(229,198,0);
+}
+
+.fire {
+    background: rgb(229,59,25);
+    box-shadow: 0 0 10px rgb(229,59,25);
+}
+
+.fairy {
+    background: rgb(212,128,207);
+    box-shadow: 0 0 10px rgb(212,128,207);
+}
+
+.fighting {
+    background: rgb(168,76,61);
+    box-shadow: 0 0 10px rgb(168,76,61);
+}
+
+.flying {
+    background: rgb(135,181,229);
+    box-shadow: 0 0 10px rgb(135,181,229);
+}
+
+.ghost {
+    background: rgb(99,60,100);
+    box-shadow: 0 0 10px rgb(99,60,100);
+}
+
+.grass {
+    background: rgb(88,169,81);
+    box-shadow: 0 0 10px rgb(88,169,81);
+}
+
+.ground {
+    background: rgb(149,104,51);
+    box-shadow: 0 0 10px rgb(149,104,51);
+}
+
+.ice {
+    background: rgb(104,186,172);
+    box-shadow: 0 0 10px rgb(104,186,172);
+}
+
+.normal {
+    background: rgb(168,168,153);
+    box-shadow: 0 0 10px rgb(168,168,153);
+}
+
+.poison {
+    background: rgb(134,74,184);
+    box-shadow: 0 0 10px rgb(134,74,184);
+}
+
+.psychic {
+    background: rgb(229,89,115);
+    box-shadow: 0 0 10px rgb(229,89,115);
+}
+
+.rock {
+    background: rgb(168,153,91);
+    box-shadow: 0 0 10px rgb(168,153,91);
+}
+
+.steel {
+    background: rgb(153,153,168);
+    box-shadow: 0 0 10px rgb(153,153,168);
+}
+
+.water {
+    background: rgb(39,139,204);
+    box-shadow: 0 0 10px rgb(39,139,204);
+}

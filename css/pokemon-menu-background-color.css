@@ -1,0 +1,76 @@
+.menu-type-grass {
+    background-color: rgb(192,228,189);
+}
+
+.menu-type-fire {
+    background-color: rgb(255,179,164);
+    
+}
+
+.menu-type-water {
+    background-color: rgb(170,215,243);
+}
+
+.menu-type-bug {
+    background-color: rgb(211,230,169);
+}
+
+.menu-type-normal {
+    background-color: rgb(227,227,221);
+}
+
+.menu-type-poison {
+    background-color: rgb(212,186,235);
+}
+
+.menu-type-electric {
+    background-color: rgb(255,241,153);
+}
+
+.menu-type-ground {
+    background-color: rgb(219,199,175);
+}
+
+.menu-type-fairy {
+    background-color: rgb(247,210,245);
+}
+
+.menu-type-fighting {
+    background-color: rgb(227,187,180);
+}
+
+.menu-type-psychic {
+    background-color: rgb(255,192,204);
+}
+
+.menu-type-rock {
+    background-color: rgb(227,221,193);
+}
+
+.menu-type-ghost {
+    background-color: rgb(197,179,197);
+}
+
+.menu-type-ice {
+    background-color: rgb(199,235,229);
+}
+
+.menu-type-dragon {
+    background-color: rgb(187,197,229);
+}
+
+.menu-type-dark {
+    background-color: rgb(184,180,180);
+}
+
+.menu-type-flying {
+    background-color: rgb(213,233,255);
+}
+
+.menu-type-steel {
+background-color: rgb(221,221,227);
+}
+
+.menu-type-notype {
+    background-color: white;
+}
