@@ -135,9 +135,9 @@ nav {
     font-size: 32px;
     font-weight: bold;
     color: blue;
-    margin-left: 64px;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: gold;
+    margin-left: 64px;
 }
 
 .search-box {
@@ -158,12 +158,24 @@ nav {
 }
 
 .search-input {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid gold;
     width: 150px;
     padding: 3px 8px;
     outline: none;
     font-weight: bold;
+}
+
+.search-input:hover {
+    border: 2px solid orangered;
+}
+
+.search-input:focus {
+    border: 2px solid lightgreen;
+}
+
+.search-input::placeholder {
+    opacity: 0;
 }
 
 .search-text {
@@ -932,6 +944,15 @@ nav {
     .search-input {
         font-size: 10px;
         width: 100px;
+    }
+
+    .search-input::placeholder {
+        opacity: 1;
+        font-size: 8px;
+    }
+
+    .search-text {
+        display: none;
     }
 
     .title-nav {
